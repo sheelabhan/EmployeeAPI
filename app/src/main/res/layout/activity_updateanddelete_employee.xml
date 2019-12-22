@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UpdateanddeleteEmployeeActivity">
+    <EditText
+        android:id="@+id/etEnumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter employee No"
+        android:layout_marginTop="30sp"
+        android:textSize="30sp"/>
+    <Button
+        android:id="@+id/btnSeearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:textSize="30dp"
+        android:layout_marginTop="50dp"/>
+    <EditText
+        android:id="@+id/etNaame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter name"
+        android:layout_marginTop="30sp"
+        android:textSize="30sp"/>
+    <EditText
+        android:id="@+id/etSsalary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Salary"
+        android:layout_marginTop="30sp"
+        android:textSize="30sp"/>
+    <EditText
+        android:id="@+id/etAgge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Age"
+        android:layout_marginTop="30sp"
+        android:textSize="30sp"/>
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textSize="30dp"
+        android:text="Update"/>
+
+</LinearLayout>

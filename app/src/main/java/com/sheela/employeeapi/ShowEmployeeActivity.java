@@ -1,6 +1,8 @@
 package com.sheela.employeeapi;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -19,13 +21,13 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ShowEmployeeActivity extends AppCompatActivity {
-    private TextView tvOutput;
+  RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_employee);
-        tvOutput=findViewById(R.id.tvOutput);
+       recyclerView=findViewById(R.id.recycleview);
         Retrofit retrofit = new Retrofit.Builder().baseUrl("http://dummy.restapiexample.com/api/v1/")
                 .addConverterFactory(GsonConverterFactory.create()).build();
         EmployeeAPI employeeAPI= retrofit.create(EmployeeAPI.class);
@@ -40,14 +42,17 @@ public class ShowEmployeeActivity extends AppCompatActivity {
                     return;
                 }
                 List<Employee> employeeList= response.body();
-                for(Employee employee:employeeList){
-                    String data= "";
-                    data += "Employee name :" + employee.getEmployee_name() + "\n";
-                    data += "Employee Salary :" + employee.getEmployee_salary() + "\n";
-                    data += "Employee age :" + employee.getEmployee_age() + "\n";
-                    data += ".......................";
-                    tvOutput.append(data);
-                }
+                EmployeeAdapter employeeAdapter= new EmployeeAdapter(getBaseContext(),employeeList);
+                recyclerView.setAdapter(employeeAdapter);
+                recyclerView.setLayoutManager(new LinearLayoutManager(getBaseContext()));
+//                for(Employee employee:employeeList){
+//                    String data= "";
+//                    data += "Employee name :" + employee.getEmployee_name() + "\n";
+//                    data += "Employee Salary :" + employee.getEmployee_salary() + "\n";
+//                    data += "Employee age :" + employee.getEmployee_age() + "\n";
+//                    data += ".......................";
+//                    tvOutput.append(data);
+//                }
 
 
             }

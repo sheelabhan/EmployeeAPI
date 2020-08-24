@@ -13,6 +13,9 @@
         android:hint="Enter employee No"
         android:layout_marginTop="30sp"
         android:textSize="30sp"/>
+
+
+
     <Button
         android:id="@+id/btnSearch"
         android:layout_width="match_parent"
@@ -20,5 +23,10 @@
         android:text="Search"
         android:textSize="30dp"
         android:layout_marginTop="50dp"/>
+    <TextView
+        android:id="@+id/tvData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"/>
 
 </LinearLayout>

@@ -21,10 +21,10 @@
         android:textSize="30dp"
         android:layout_marginTop="50dp"/>
     <EditText
-        android:id="@+id/etNaame"
+        android:id="@+id/etNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter name"
+        android:hint="Employee no"
         android:layout_marginTop="30sp"
         android:textSize="30sp"/>
     <EditText
@@ -35,10 +35,10 @@
         android:layout_marginTop="30sp"
         android:textSize="30sp"/>
     <EditText
-        android:id="@+id/etAgge"
+        android:id="@+id/etNum"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter Age"
+        android:hint="Employee No"
         android:layout_marginTop="30sp"
         android:textSize="30sp"/>
     <Button
@@ -48,5 +48,12 @@
         android:layout_marginTop="30dp"
         android:textSize="30dp"
         android:text="Update"/>
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textSize="30dp"
+        android:text="Delete"/>
 
 </LinearLayout>
